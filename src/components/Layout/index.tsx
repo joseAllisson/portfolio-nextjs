@@ -1,12 +1,17 @@
+import { Header } from "../Header";
+import { ContentStyled, LayoutStyled } from "./style";
+
 interface LayoutProps {
-    children: React.ReactNode;
+  children: React.ReactNode;
 }
 
 export const LayoutComponent = ({ children }: LayoutProps) => {
-    return (
-        <>
-            teste
-            {children}
-        </>
-    );
-}
+  return (
+    <>
+      <Header />
+      <LayoutStyled>
+        <ContentStyled>{children}</ContentStyled>
+      </LayoutStyled>
+    </>
+  );
+};

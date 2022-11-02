@@ -7,6 +7,12 @@ declare module 'styled-components' {
     colors: {
       primary: string;
       secondary: string;
+      text: string;
+      background: string;
+      border: string;
     };
+    fontFamily: {
+      primary: string;
+    }
   }
 }

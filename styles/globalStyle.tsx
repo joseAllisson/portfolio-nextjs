@@ -7,6 +7,10 @@ export const GlobalStyle = createGlobalStyle`
     box-sizing: border-box;
   }
   
+  html {
+    scroll-behavior: smooth;
+  }
+
   body {
     overflow-x: hidden;
   }
@@ -27,7 +31,13 @@ export const GlobalStyle = createGlobalStyle`
   h1,
   h2,
   h3,
-  p {
-    font-family: "Open Sans", sans-serif;
+  h4,
+  h5,
+  h6,
+  p,
+  a,
+  button
+   {
+    font-family: ${(props) => props.theme.fontFamily.primary}, sans-serif;
   }
 `;
