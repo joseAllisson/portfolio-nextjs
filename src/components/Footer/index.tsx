@@ -5,7 +5,7 @@ import { Text } from "../Text";
 
 import { FooterStyled } from "./style";
 
-const Footer = () => {
+export const Footer = () => {
   return (
     <FooterStyled>
       <Text padding="8px 0">Redes Sociais</Text>
@@ -43,5 +43,3 @@ const Footer = () => {
     </FooterStyled>
   );
 };
-
-export default Footer;

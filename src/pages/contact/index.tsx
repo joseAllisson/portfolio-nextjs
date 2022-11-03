@@ -1,6 +1,6 @@
 import { GetStaticProps } from "next";
 
-const Home = () => {
+const ContactPage = () => {
   return <div>contact</div>;
 };
 
@@ -10,4 +10,4 @@ export const getStaticProps: GetStaticProps = async () => {
   };
 };
 
-export default Home;
+export default ContactPage;

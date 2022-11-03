@@ -1,19 +1,14 @@
-import Footer from "../Footer";
-import { Header } from "../Header";
-import { ContentStyled, LayoutStyled } from "./style";
+import { DefaultLayout } from "./Default";
 
 interface LayoutProps {
   children: React.ReactNode;
+  layout?: "default" | "none";
 }
 
-export const LayoutComponent = ({ children }: LayoutProps) => {
-  return (
-    <>
-      <Header />
-      <LayoutStyled>
-        <ContentStyled>{children}</ContentStyled>
-      </LayoutStyled>
-      <Footer />
-    </>
-  );
+export const LayoutComponent = ({ children, layout }: LayoutProps) => {
+  return layout === "default" ? <DefaultLayout>{children}</DefaultLayout> : <>{children}</>;
+};
+
+LayoutComponent.defaultProps = {
+  layout: "default",
 };

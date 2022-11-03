@@ -12,6 +12,10 @@ export const NavTabsStyled = styled.div`
         .tab {
             font-family: ${({ theme }) => theme.fontFamily.primary};
             font-size: 0.95rem;
+
+            &:hover {
+                color: ${({ theme }) => theme.colors.primary};
+            }
         }
     
         .active {

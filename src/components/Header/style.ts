@@ -10,11 +10,19 @@ export const HeaderStyled = styled.header`
         background-position: center;
         background-size: cover;
         text-align: center;
-
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
+
+        .animated-button-container {
+            position: absolute;
+            right: 10%;
+            top: 10%;
+            display: flex;
+            flex-direction: column;
+            gap: 40px;
+        }
     
         h1 {
             font-size: 2rem;
@@ -36,11 +44,4 @@ export const HeaderStyled = styled.header`
         position: relative;
         z-index: 1;
     }
-
-    /* .profile-container {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-    } */
 `;

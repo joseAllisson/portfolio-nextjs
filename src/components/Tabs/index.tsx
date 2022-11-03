@@ -29,7 +29,7 @@ export const NavTabs = ({ tabs }: NavTabsProps) => {
   };
 
   useEffect(() => {
-    const index = tabs.findIndex((tab) => tab.link === pathname);
+    const index = tabs.findIndex((tab) => tab.link.replace("#content", "") === pathname);
     setValue(index);
   }, [pathname, tabs]);
 

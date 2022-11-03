@@ -1,30 +1,26 @@
 import Image from "next/image";
-import Link from "next/link";
-import { useRouter } from "next/router";
+import { VscFilePdf } from "react-icons/vsc";
+import { AiOutlineArrowDown } from "react-icons/ai";
 
 import { Text } from "../Text";
-import { HeaderStyled } from "./style";
 import Profile from "../../assets/img/perfil.png";
 import { NavTabs } from "../Tabs";
+import { AnimatedButton } from "../AnimatedButton";
 
-// import "./style.css";
+import { HeaderStyled } from "./style";
 
 export const Header = () => {
-  const location = useRouter();
-  const path = location.pathname;
-
   return (
     <HeaderStyled>
       <section className="background-image">
-        {/* criar componentes expecificos para isso */}
-        {/* <Link href="/cv" target="_blank" className="btn btn-header btn-docs" title="Currículo PDF">
-                <i className="far fa-file-alt"></i>
-            </Link>
-
-            <a href="#section" className="btn btn-header btn-arrow-bottom">
-                <i className="far fa-arrow-down"></i>
-            </a> 
-        */}
+        <div className="animated-button-container">
+          <a href="/docs/cv.pdf" target="_blank">
+            <AnimatedButton animation="moveRight" icon={<VscFilePdf size={28} />} />
+          </a>
+          <a href="#content">
+            <AnimatedButton animation="moveLeft" icon={<AiOutlineArrowDown size={28} />} />
+          </a>
+        </div>
 
         <div className="profile-container">
           <Image
@@ -36,15 +32,12 @@ export const Header = () => {
             priority
           />
 
-          {/* <div> */}
           <h1>José Alisson Bezerra</h1>
           <Text fontSize="1.2rem">Portfólio</Text>
-          {/* </div> */}
         </div>
       </section>
 
       <section id="content" className="menu">
-        {/* tabs */}
         <NavTabs
           tabs={[
             { label: "Sobre", link: "/about" },
