@@ -10,6 +10,8 @@ export interface TextStyledProps {
     maxWidth?: string;
     maxHeight?: string;
     overflow?: string;
+    padding?: string;
+    whiteSpace?: 'normal' | 'pre' | 'nowrap' | 'pre-wrap' | 'pre-line' | 'break-spaces';
 }
 
 // v1

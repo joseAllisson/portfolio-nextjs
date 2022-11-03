@@ -14,7 +14,6 @@ export const LayoutStyled = styled.main`
 export const ContentStyled = styled.section`
     background-color: ${({ theme }) => theme.colors.background};
     position: relative;
-    height: 100%;
     width: 1200px;
     padding: 32px;
 

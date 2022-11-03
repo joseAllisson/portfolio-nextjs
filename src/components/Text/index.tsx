@@ -12,11 +12,13 @@ export const Text = ({ children, ...props }: TextProps) => {
 Text.defaultProps = {
   fontSize: "inherit",
   fontWeight: "inherit",
-  color: "initial",
-  display: "initial",
-  textOverflow: "initial",
-  lineClamp: "initial",
-  overflow: "initial",
+  color: "inherit",
+  display: "inline-block",
+  textOverflow: "inherit",
+  lineClamp: "inherit",
+  overflow: "inherit",
   maxWidth: "none",
   maxHeight: "none",
+  padding: "0",
+  whiteSpace: "wrap",
 };
