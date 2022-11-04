@@ -1,26 +1,37 @@
-import React from 'react';
+import { ButtonBase } from "@mui/material";
+import { FaEye, FaLink } from "react-icons/fa";
+import { Text } from "../Text";
+import { CardStyled } from "./style";
 
-// import './style.css';
-
-function Card({ card }) {
-    return (
-        <div className="col-md-6 mt-4">
-            <div style={{ backgroundImage: `url(./img/bg/${card.img})` }} className="img">
-                <div className="overlay-img"></div>
-                <div className="animation-description">
-                    <h2>{card.title}</h2>
-                    <p>{card.description}</p>
-                    <span className="icons">
-                        <button className="icon fas fa-eye border-0"
-                            onClick={() => {
-                                window.open(card.link, '_blank');
-                            }}
-                        ></button>
-                    </span>
-                </div>
-            </div>
-        </div>
-    );
+export interface CardProps {
+  title: string;
+  description: string;
+  img: string;
+  link?: string;
 }
 
-export default Card;
+export const Card = ({ title, description, img, link }: CardProps) => {
+  return (
+    <CardStyled background={img}>
+      <section className="overlay">
+        <div className="card-content">
+          <h3>{title}</h3>
+          <Text fontSize="1rem">{description}</Text>
+
+          <div className="button-container">
+            <ButtonBase disabled={!link} onClick={() => window.open(link, "_blank")}>
+              <FaEye />
+            </ButtonBase>
+            <ButtonBase disabled={!link} onClick={() => window.open(link, "_blank")}>
+              <FaLink />
+            </ButtonBase>
+          </div>
+        </div>
+      </section>
+    </CardStyled>
+  );
+};
+
+Card.defaultProps = {
+  link: "",
+};

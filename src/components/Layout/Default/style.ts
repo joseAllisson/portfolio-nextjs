@@ -15,7 +15,7 @@ export const ContentStyled = styled.section`
     background-color: ${({ theme }) => theme.colors.background};
     position: relative;
     width: 1200px;
-    padding: 32px;
+    padding: 40px;
 
     &::before {
         content: "";

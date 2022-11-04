@@ -8,18 +8,23 @@ import { NavTabs } from "../Tabs";
 import { AnimatedButton } from "../AnimatedButton";
 
 import { HeaderStyled } from "./style";
+import { Tooltip } from "@mui/material";
 
 export const Header = () => {
   return (
     <HeaderStyled>
       <section className="background-image">
         <div className="animated-button-container">
-          <a href="/docs/cv.pdf" target="_blank">
-            <AnimatedButton animation="moveRight" icon={<VscFilePdf size={28} />} />
-          </a>
-          <a href="#content">
-            <AnimatedButton animation="moveLeft" icon={<AiOutlineArrowDown size={28} />} />
-          </a>
+          <Tooltip title="Currículo em PDF">
+            <a href="/docs/cv.pdf" target="_blank">
+              <AnimatedButton animation="moveRight" icon={<VscFilePdf size={28} />} />
+            </a>
+          </Tooltip>
+          <Tooltip title="Rolar para baixo">
+            <a href="#content">
+              <AnimatedButton animation="moveLeft" icon={<AiOutlineArrowDown size={28} />} />
+            </a>
+          </Tooltip>
         </div>
 
         <div className="profile-container">
@@ -31,7 +36,6 @@ export const Header = () => {
             className="profile-img"
             priority
           />
-
           <h1>José Alisson Bezerra</h1>
           <Text fontSize="1.2rem">Portfólio</Text>
         </div>
