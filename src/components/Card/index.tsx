@@ -1,9 +1,10 @@
-import { ButtonBase } from "@mui/material";
+import { ButtonBase, Tooltip } from "@mui/material";
 import { FaEye, FaLink } from "react-icons/fa";
 import { Text } from "../Text";
 import { CardStyled } from "./style";
 
 export interface CardProps {
+  id: number;
   title: string;
   description: string;
   img: string;
@@ -19,12 +20,16 @@ export const Card = ({ title, description, img, link }: CardProps) => {
           <Text fontSize="1rem">{description}</Text>
 
           <div className="button-container">
-            <ButtonBase disabled={!link} onClick={() => window.open(link, "_blank")}>
-              <FaEye />
-            </ButtonBase>
-            <ButtonBase disabled={!link} onClick={() => window.open(link, "_blank")}>
-              <FaLink />
-            </ButtonBase>
+            <Tooltip title="Imagem">
+              <ButtonBase onClick={() => window.open(img, "_blank")}>
+                <FaEye />
+              </ButtonBase>
+            </Tooltip>
+            <Tooltip title={link}>
+              <ButtonBase disabled={!link} onClick={() => window.open(link, "_blank")}>
+                <FaLink />
+              </ButtonBase>
+            </Tooltip>
           </div>
         </div>
       </section>

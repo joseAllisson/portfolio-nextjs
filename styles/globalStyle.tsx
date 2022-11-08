@@ -38,6 +38,7 @@ export const GlobalStyle = createGlobalStyle`
   a,
   button
    {
+    color: ${({ theme }) => theme.colors.text};
     font-family: ${(props) => props.theme.fontFamily.primary}, sans-serif;
   }
 

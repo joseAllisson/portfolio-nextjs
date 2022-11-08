@@ -1,34 +1,25 @@
-import styled from "styled-components";
+// import { TextStyled, TextStyledProps } from "./style";
 
-export interface TextStyledProps {
-    fontSize?: string;
-    fontWeight?: string;
-    color?: string;
-    display?: string;
-    textOverflow?: string;
-    lineClamp?: string;
-    maxWidth?: string;
-    maxHeight?: string;
-    overflow?: string;
-    padding?: string;
-    whiteSpace?: 'normal' | 'pre' | 'nowrap' | 'pre-wrap' | 'pre-line' | 'break-spaces';
-}
+// interface TextProps extends TextStyledProps {
+//   children: React.ReactNode;
+// }
 
-// v1
-// export const TextStyled = styled.p<TextStyledProps>`
-//     font-size: ${({ fontSize }) => fontSize};
-//     font-weight: ${({ fontWeight }) => fontWeight};
-//     color: ${({ color }) => color};
-//     display: ${({ display }) => display};
-//     text-overflow: ${({ textOverflow }) => textOverflow};
-//     -webkit-line-clamp: ${({ lineClamp }) => lineClamp};
-//     overflow: ${({ overflow }) => overflow};
-//     max-width: ${({ maxWidth }) => maxWidth};
-//     max-height: ${({ maxHeight }) => maxHeight};
-// `;
+// // TODO - se não existir alguma lógica, retornar apenas o Style direto
+// export const Text = ({ children, ...props }: TextProps) => {
+//   return <TextStyled {...props}>{children}</TextStyled>;
+// };
 
-// v2
-export const TextStyled = styled.p<TextStyledProps>(({ lineClamp, ...props }: TextStyledProps) => ({
-    ...props,
-    webkitLineClamp: lineClamp,
-}));
+// Text.defaultProps = {
+//   fontSize: "inherit",
+//   fontWeight: "inherit",
+//   color: "inherit",
+//   display: "block",
+//   textOverflow: "inherit",
+//   lineClamp: "inherit",
+//   overflow: "inherit",
+//   maxWidth: "none",
+//   maxHeight: "none",
+//   padding: "0",
+//   whiteSpace: "wrap",
+//   textAlign: "inherit",
+// };

@@ -2,8 +2,8 @@ import Image from "next/image";
 import { VscFilePdf } from "react-icons/vsc";
 import { AiOutlineArrowDown } from "react-icons/ai";
 
-import { Text } from "../Text";
 import Profile from "../../assets/img/perfil.png";
+import { Text } from "../Text";
 import { NavTabs } from "../Tabs";
 import { AnimatedButton } from "../AnimatedButton";
 
