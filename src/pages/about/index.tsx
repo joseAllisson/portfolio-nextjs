@@ -1,5 +1,6 @@
 import { GetStaticProps } from "next";
 import Image from "next/image";
+import Typewriter from "typewriter-effect";
 
 import Profile from "../../assets/img/perfil.png";
 import { Text } from "../../components/Text";
@@ -11,6 +12,7 @@ interface coursesProps {
   title: string;
   institution: string;
   time: string;
+  link?: string;
 }
 interface AboutProps {
   formation: coursesProps[];
@@ -22,7 +24,17 @@ const AboutPage = ({ formation, courses }: AboutProps) => {
     <AboutStyled>
       <h2>Sobre</h2>
       <hr />
-      <p>Desenvolvedor ...</p>
+      <h3 className="animated-text">
+        Desenvolvedor
+        <Typewriter
+          options={{
+            strings: ["Frontend", "Backend", "Fullstack"],
+            autoStart: true,
+            loop: true,
+            deleteSpeed: 20,
+          }}
+        />
+      </h3>
       <section className="profile-container">
         <Image src={Profile} width={280} height={280} alt="José Alisson" />
         <Text textAlign="justify">
@@ -48,7 +60,7 @@ const AboutPage = ({ formation, courses }: AboutProps) => {
         {courses.map((course) => (
           <article key={course.id}>
             <h3>{course.title}</h3>
-            <Text>{course.time}</Text>
+            <Text>Carga Horária: {course.time} horas</Text>
             <Text fontWeight="600">{course.institution}</Text>
           </article>
         ))}
@@ -76,15 +88,31 @@ export const getStaticProps: GetStaticProps = async () => {
   const courses = [
     {
       id: 1,
-      title: "Operador de microcomputador",
-      time: "Carga Horária: 160 horas",
-      institution: "SENAI Theobaldo De Nigris – SP",
+      title: "React Completo",
+      time: "36",
+      institution: "Origamid",
+      link: "https://www.origamid.com/certificate/4df2861c",
     },
     {
       id: 2,
+      title: "Javacript Completo ES6",
+      time: "74",
+      institution: "Origamid",
+      link: "https://www.origamid.com/certificate/3f1e329c/",
+    },
+    {
+      id: 3,
       title: "Programação Web",
-      time: "Carga horaria: 106 horas",
+      time: "106",
       institution: "Udemy",
+      link: "https://www.udemy.com/certificate/UC-22c3a1cb-ac13-4b5f-b51f-f9a4be2870fc/",
+    },
+    {
+      id: 4,
+      title: "Operador de microcomputador",
+      time: "160",
+      institution: "SENAI Theobaldo De Nigris – SP",
+      link: "",
     },
   ];
 

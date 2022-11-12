@@ -6,7 +6,7 @@ export const LayoutStyled = styled.main`
     background-repeat: no-repeat;
     background-size: cover;
     background-attachment: fixed;
-    min-height: 1000px;
+    min-height: 360px;
     display: flex;
     justify-content: center;
 `;
@@ -15,18 +15,11 @@ export const ContentStyled = styled.section`
     background-color: ${({ theme }) => theme.colors.background};
     position: relative;
     width: 1200px;
-    padding: 40px;
+    padding: 20px;
+`;
 
-    &::before {
-        content: "";
-        top: 16px;
-        left: 16px;
-        right: 16px;
-        bottom: 16px;
-        position: absolute;
-        background-color: transparent;
-        width: calc(100% -32px);
-        height: calc(100% -32px);
-        border: 1px solid ${({ theme }) => theme.colors.border};
-    }
+export const LeafStyled = styled.section`
+    height: 100%;
+    border: 1px solid ${({ theme }) => theme.colors.border};
+    padding: 20px;
 `;

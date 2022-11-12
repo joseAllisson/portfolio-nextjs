@@ -37,9 +37,9 @@ export const Footer = () => {
         </ButtonBase>
       </div>
 
-      <p className="background-primary">
-        © {new Date().getFullYear()} José Alisson Bezerra de Souza
-      </p>
+      <Text className="background-primary">
+        © {new Date().getFullYear()} - José Alisson Bezerra de Souza
+      </Text>
     </FooterStyled>
   );
 };

@@ -33,3 +33,7 @@ export const Text = styled.p<TextStyledProps>(({ lineClamp, ...props }: TextStyl
   ...props,
   webkitLineClamp: lineClamp,
 }));
+
+Text.defaultProps = {
+  color: "inherit",
+};

@@ -12,6 +12,15 @@ export const AboutStyled = styled.section`
         text-align: center;
     }
 
+    .animated-text {
+        font-size: 2rem;
+        font-weight: 400;
+        text-align: center;
+        display: flex;
+        justify-content: center;
+        gap: 8px;
+    }
+
     hr {
         margin: 16px 0;
     }
