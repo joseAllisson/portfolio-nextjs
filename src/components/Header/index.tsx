@@ -1,30 +1,52 @@
-import Image from "next/image";
+import { useState } from "react";
+import { useRouter } from "next/router";
 import { VscFilePdf } from "react-icons/vsc";
 import { AiOutlineArrowDown } from "react-icons/ai";
+import { MdDarkMode } from "react-icons/md";
+import Image from "next/image";
 
 import Profile from "../../assets/img/perfil.png";
 import { Text } from "../Text";
 import { NavTabs } from "../Tabs";
-import { AnimatedButton } from "../AnimatedButton";
+import { FloatingMenu, FloatingMenuItem, FloatingMenuItemProps } from "../FloatingMenu";
 
 import { HeaderStyled } from "./style";
-import { Tooltip } from "@mui/material";
 
 export const Header = () => {
+  const { push  } = useRouter();
+  const [open, setOpen] = useState(false);
+  const menu: FloatingMenuItemProps[] = [
+    {
+      index: 1,
+      onClick: () => push("#content"),
+      children: <MdDarkMode size={28} />,
+      tooltip: "Rolar para baixo",
+    },
+    {
+      index: 2,
+      onClick: () => window.open("/docs/cv.pdf", '_blank'),
+      children: <VscFilePdf size={28} />,
+      tooltip: "Currículo em PDF",
+    },
+    {
+      index: 3,
+      onClick: () => push("#content"),
+      children: <AiOutlineArrowDown size={28} />,
+      tooltip: "Rolar para baixo",
+    },
+  ];
+
   return (
     <HeaderStyled>
       <section className="background-image">
         <div className="animated-button-container">
-          <Tooltip title="Currículo em PDF">
-            <a href="/docs/cv.pdf" target="_blank">
-              <AnimatedButton animation="moveRight" icon={<VscFilePdf size={28} />} />
-            </a>
-          </Tooltip>
-          <Tooltip title="Rolar para baixo">
-            <a href="#content">
-              <AnimatedButton animation="moveLeft" icon={<AiOutlineArrowDown size={28} />} />
-            </a>
-          </Tooltip>
+          <FloatingMenu open={open} onChange={(newValue) => setOpen(newValue)}>
+            {menu.map(({ index, children, ...item }) => (
+              <FloatingMenuItem {...item} index={index} key={index}>
+                {children}
+              </FloatingMenuItem>
+            ))}
+          </FloatingMenu>
         </div>
 
         <div className="profile-container">

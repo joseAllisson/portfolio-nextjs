@@ -57,7 +57,7 @@ export const getStaticProps: GetStaticProps = async () => {
     },
     {
       id: 5,
-      title: "Notícia cidade",
+      title: "Notícias cidade",
       description: "Seu portal de notícias diário! um blog otimizado e simplificado com WordPress.",
       img: "/img/portfolio/portal.png",
       // link: "http://portalcidade.epizy.com/",

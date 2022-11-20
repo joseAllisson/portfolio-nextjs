@@ -19,7 +19,17 @@ export const AnimatedButtonStyled = styled(ButtonBase) <AnimatedButtonStyledProp
     border-radius: 50%;
     box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.200);
     /* animation */
-    animation-name: ${({ animation }) => animation === 'moveLeft' ? moveLeft : moveRight};
+    animation-name: ${({ animation }) => {
+    switch (animation) {
+      case 'moveLeft':
+        return moveLeft
+      case 'moveRight':
+        return moveRight
+
+      default:
+        return '';
+    }
+  }};
     animation-duration: ${({ animationDuration }) => animationDuration ? animationDuration + 's' : '1s'} ;
     animation-fill-mode: ${({ animationFillMode }) => animationFillMode || 'forwards'};
     transition: 0.3s;
