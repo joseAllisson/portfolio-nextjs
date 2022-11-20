@@ -1,6 +1,8 @@
-import { Tooltip } from "@mui/material";
-import { AnimatedButton } from "../AnimatedButton";
 import { BsFillGearFill } from "react-icons/bs";
+import Tooltip from "@mui/material/Tooltip";
+
+import { AnimatedButton } from "../AnimatedButton";
+
 import { FloatingMenuContentStyled, FloatingMenuItemStyled, FloatingMenuStyled } from "./style";
 
 export interface FloatingMenuItemProps {
@@ -23,28 +25,20 @@ export const FloatingMenu = ({ open, onChange, children }: FloatingMenuProps) =>
       <AnimatedButton onClick={() => onChange(!open)} animation="moveRight">
         <BsFillGearFill size={28} />
       </AnimatedButton>
-      <FloatingMenuContentStyled className={open ? "open" : "closed"}>{children}</FloatingMenuContentStyled>
+      <FloatingMenuContentStyled className={open ? "open" : "closed"}>
+        {children}
+      </FloatingMenuContentStyled>
     </FloatingMenuStyled>
   );
 };
 
 // item do menu, usado para animação do floatingMenu
-export const FloatingMenuItem = ({
-  tooltip,
-  children,
-  index,
-  onClick,
-}: FloatingMenuItemProps) => {
+export const FloatingMenuItem = ({ tooltip, children, index, onClick }: FloatingMenuItemProps) => {
   return (
-    <FloatingMenuItemStyled index={index}>
-      <Tooltip title={tooltip}>
-          <AnimatedButton onClick={onClick}>{children}</AnimatedButton>
-      </Tooltip>
-    </FloatingMenuItemStyled>
+    <Tooltip title={tooltip}>
+      <FloatingMenuItemStyled index={index}>
+        <AnimatedButton onClick={onClick}>{children}</AnimatedButton>
+      </FloatingMenuItemStyled>
+    </Tooltip>
   );
 };
-
-// TODO
-// [] - Criar componente de menu flutuante
-// [] - Criar componente de item de menu flutuante
-// [] - Tentar não passar o icone como props, mas sim como children

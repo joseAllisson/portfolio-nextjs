@@ -1,3 +1,4 @@
+import { getCookie, setCookie } from "cookies-next";
 import { Dispatch, SetStateAction, useEffect, useState } from "react";
 
 type Response<T> = [
@@ -7,17 +8,17 @@ type Response<T> = [
 
 function usePersistedState<T>(key: string, initialState: T): Response<T> {
     const [state, setState] = useState(() => {
-        const storage = localStorage.getItem(key);
+        const storage = getCookie(key);
 
         if (storage) {
-            return JSON.parse(storage);
+            return JSON.parse(storage as string);
         } else {
             return initialState;
         }
     });
 
     useEffect(() => {
-      localStorage.setItem(key, JSON.stringify(state));
+        setCookie(key, JSON.stringify(state));
     }, [key, state])
     
     return [state, setState];
