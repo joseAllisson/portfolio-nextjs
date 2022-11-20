@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useContext, useState } from "react";
 import { useRouter } from "next/router";
 import { VscFilePdf } from "react-icons/vsc";
 import { AiOutlineArrowDown } from "react-icons/ai";
@@ -11,20 +11,23 @@ import { NavTabs } from "../Tabs";
 import { FloatingMenu, FloatingMenuItem, FloatingMenuItemProps } from "../FloatingMenu";
 
 import { HeaderStyled } from "./style";
+import { GlobalContext } from "../../context/GlobalContext";
 
 export const Header = () => {
-  const { push  } = useRouter();
+  const { toggleTheme } = useContext(GlobalContext);
+
+  const { push } = useRouter();
   const [open, setOpen] = useState(false);
   const menu: FloatingMenuItemProps[] = [
     {
       index: 1,
-      onClick: () => push("#content"),
+      onClick: () => toggleTheme(),
       children: <MdDarkMode size={28} />,
-      tooltip: "Rolar para baixo",
+      tooltip: "Alternar tema",
     },
     {
       index: 2,
-      onClick: () => window.open("/docs/cv.pdf", '_blank'),
+      onClick: () => window.open("/docs/cv.pdf", "_blank"),
       children: <VscFilePdf size={28} />,
       tooltip: "Currículo em PDF",
     },

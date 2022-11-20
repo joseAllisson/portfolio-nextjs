@@ -8,15 +8,23 @@ interface FloatingMenuItemStyledProps {
 export const FloatingMenuItemStyled = styled.div<FloatingMenuItemStyledProps>`
     position: absolute;
     animation: ${({ index }) => move({
-        initialTransform: `0, 0`,
-        endTransform: `0, ${index * 72}px`
-    })} forwards;
+    initialTransform: `0, 0`,
+    endTransform: `0, ${index * 72}px`
+})} forwards;
     animation-duration: ${({ index }) => index * 0.2}s;
+
+    button {
+        background-color: ${({ theme }) => theme.colors.background};
+    }
 `;
 
 export const FloatingMenuStyled = styled.div`
     position: relative;
     z-index: 1;
+
+    button {
+        background-color: ${({ theme }) => theme.colors.background};
+    }
 `;
 
 export const FloatingMenuContentStyled = styled.div`

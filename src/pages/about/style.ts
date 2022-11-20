@@ -3,6 +3,7 @@ import styled from "styled-components";
 export const AboutStyled = styled.section`
     section {
         padding: 24px;
+        color: ${({ theme }) => theme.colors.text};
     }
     
     h2 {

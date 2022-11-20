@@ -36,6 +36,8 @@ export const HeaderStyled = styled.header`
     }
 
     .menu {
+        background-color: ${({ theme }) => theme.colors.background};
+        color: ${({ theme }) => theme.colors.text};
         height: 60px;
         display: flex;
         justify-content: center;
@@ -43,5 +45,9 @@ export const HeaderStyled = styled.header`
         box-shadow: 5px 5px 15px #1111113d;
         position: relative;
         z-index: 1;
+
+        button {
+            color: ${({ theme }) => theme.colors.text};
+        }
     }
 `;
