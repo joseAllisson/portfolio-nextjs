@@ -31,7 +31,7 @@ export const Header = () => {
     },
     {
       index: 3,
-      onClick: () => push("#content"),
+      link: "#content",
       children: <AiOutlineArrowDown size={28} />,
       tooltip: "Rolar para baixo",
     },

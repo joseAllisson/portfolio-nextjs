@@ -1,7 +1,8 @@
 import { useEffect, useState } from "react";
+import { useRouter } from "next/router";
 import Tabs from "@mui/material/Tabs";
 import Tab from "@mui/material/Tab";
-import { useRouter } from "next/router";
+
 import { NavTabsStyled } from "./style";
 
 interface TabProps {

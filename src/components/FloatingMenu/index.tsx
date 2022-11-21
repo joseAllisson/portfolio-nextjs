@@ -9,7 +9,8 @@ export interface FloatingMenuItemProps {
   index: number;
   tooltip: string;
   children: React.ReactNode;
-  onClick: () => void;
+  link?: string;
+  onClick?: () => void;
 }
 
 interface FloatingMenuProps {
@@ -33,12 +34,29 @@ export const FloatingMenu = ({ open, onChange, children }: FloatingMenuProps) =>
 };
 
 // item do menu, usado para animação do floatingMenu
-export const FloatingMenuItem = ({ tooltip, children, index, onClick }: FloatingMenuItemProps) => {
+export const FloatingMenuItem = ({
+  tooltip,
+  children,
+  index,
+  link,
+  onClick,
+}: FloatingMenuItemProps) => {
   return (
     <Tooltip title={tooltip}>
       <FloatingMenuItemStyled index={index}>
-        <AnimatedButton onClick={onClick}>{children}</AnimatedButton>
+        {link ? (
+          <a href={link}>
+            <AnimatedButton onClick={onClick}>{children}</AnimatedButton>
+          </a>
+        ) : (
+          <AnimatedButton onClick={onClick}>{children}</AnimatedButton>
+        )}
       </FloatingMenuItemStyled>
     </Tooltip>
   );
+};
+
+FloatingMenuItem.defaultProps = {
+  onClick: () => {},
+  link: "",
 };
