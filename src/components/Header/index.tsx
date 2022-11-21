@@ -5,17 +5,15 @@ import { AiOutlineArrowDown } from "react-icons/ai";
 import { MdDarkMode } from "react-icons/md";
 import Image from "next/image";
 
-import Profile from "../../assets/img/perfil.png";
 import { Text } from "../Text";
 import { NavTabs } from "../Tabs";
 import { FloatingMenu, FloatingMenuItem, FloatingMenuItemProps } from "../FloatingMenu";
+import { GlobalContext } from "../../context/GlobalContext";
 
 import { HeaderStyled } from "./style";
-import { GlobalContext } from "../../context/GlobalContext";
 
 export const Header = () => {
   const { toggleTheme } = useContext(GlobalContext);
-
   const { push } = useRouter();
   const [open, setOpen] = useState(false);
   const menu: FloatingMenuItemProps[] = [
@@ -54,7 +52,7 @@ export const Header = () => {
 
         <div className="profile-container">
           <Image
-            src={Profile}
+            src="/img/perfil.png"
             alt="Jose Alisson"
             height={150}
             width={150}
