@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-export const ContactStyled = styled.section`
+const ContactStyled = styled.section`
     h2, h3 {
         color: ${({ theme }) => theme.colors.primary};
         font-size: 2rem;
@@ -37,3 +37,5 @@ export const ContactStyled = styled.section`
         }
     }
 `;
+
+export default ContactStyled;

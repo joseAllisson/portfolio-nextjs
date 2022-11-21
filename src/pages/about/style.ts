@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-export const AboutStyled = styled.section`
+const AboutStyled = styled.section`
     section {
         padding: 24px;
         color: ${({ theme }) => theme.colors.text};
@@ -51,3 +51,5 @@ export const AboutStyled = styled.section`
         }
     }
 `;
+
+export default AboutStyled;

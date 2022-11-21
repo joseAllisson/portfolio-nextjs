@@ -5,7 +5,7 @@ import Typewriter from "typewriter-effect";
 import Profile from "../../assets/img/perfil.png";
 import { Text } from "../../components/Text";
 
-import { AboutStyled } from "./style";
+import AboutStyled from "./style";
 
 interface coursesProps {
   id: number;
@@ -38,7 +38,7 @@ const AboutPage = ({ formation, courses }: AboutProps) => {
       <section className="profile-container">
         <Image src={Profile} width={280} height={280} alt="José Alisson" />
         <Text textAlign="justify">
-          Bem vindo! sou programador, desde criança sempre gostei de tecnologia, mas quando conheci
+          Bem vindo! eu sou programador! Desde criança sempre gostei de tecnologia, mas quando conheci
           o mundo da programação, me apaixonei, e desde então venho estudando e me aperfeiçoando
           para me tornar um profissional cada vez melhor. Nada melhor que trabalhar com o que se
           gosta!

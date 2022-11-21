@@ -1,6 +1,6 @@
 import type { AppProps } from "next/app";
 
-import { GlobalStyle } from "../../styles/globalStyle";
+import { GlobalStyle } from "../styles/globalStyle";
 import { LayoutComponent } from "../components/Layout";
 
 import { GlobalProvider } from "../context/GlobalContext";

@@ -45,7 +45,7 @@ export const GlobalStyle = createGlobalStyle`
   hr {
     margin: 4px 0;
     height: 1px;
-    background: currentColor;
+    background: ${({ theme }) => theme.colors.text};
     border: 0;
     opacity: .25;
   }

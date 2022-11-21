@@ -1,5 +1,5 @@
-export const defaultTheme = {
-  title: "default",
+export const lightTheme = {
+  title: "light",
   colors: {
     primary: "#4386df",
     secondary: "#ffffff",

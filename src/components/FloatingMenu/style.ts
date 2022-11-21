@@ -1,4 +1,5 @@
 import styled from "styled-components";
+
 import { move } from "../../utils/animation/move";
 
 interface FloatingMenuItemStyledProps {

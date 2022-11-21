@@ -1,13 +1,13 @@
 import { createContext } from "react";
-import { Theme, ThemeProvider } from "styled-components";
+import { DefaultTheme, ThemeProvider } from "styled-components";
 
-import { darkTheme } from "../../styles/themes/dark";
-import { defaultTheme } from "../../styles/themes/default";
+import { darkTheme } from "../styles/themes/dark";
+import { lightTheme } from "../styles/themes/light";
 
 import usePersistedState from "../utils/hooks/usePersistedState";
 
 export interface GlobalContextProps {
-  theme: Theme;
+  theme: DefaultTheme;
   toggleTheme: () => void;
 }
 
@@ -17,12 +17,11 @@ export interface GlobalProviderProps {
 
 export const GlobalContext = createContext({} as GlobalContextProps);
 
-// !resolver bug de iniciar tema errada
 export function GlobalProvider({ children }: GlobalProviderProps) {
-  const [theme, setTheme] = usePersistedState<Theme>("theme", defaultTheme);
+  const [theme, setTheme] = usePersistedState<DefaultTheme>("theme", darkTheme);
 
   const toggleTheme = () => {
-    setTheme(theme.title !== "default" ? defaultTheme : darkTheme);
+    setTheme(theme.title !== "light" ? lightTheme : darkTheme);
   };
 
   return (

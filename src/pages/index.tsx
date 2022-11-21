@@ -2,7 +2,8 @@ import { GetStaticProps } from "next";
 
 import { Card, CardProps } from "../components/Card";
 
-import { HomeStyled } from "./style";
+import HomeStyled from "./style";
+
 interface HomeProps {
   cards: CardProps[];
 }

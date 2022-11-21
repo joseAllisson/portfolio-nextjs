@@ -7,18 +7,24 @@ type Response<T> = [
 ]
 
 function usePersistedState<T>(key: string, initialState: T): Response<T> {
-    const [state, setState] = useState(() => {
-        const storage = getCookie(key);
-
-        if (storage) {
-            return JSON.parse(storage as string);
-        } else {
-            return initialState;
-        }
-    });
+    const [state, setState] = useState(initialState);
 
     useEffect(() => {
-        setCookie(key, JSON.stringify(state));
+        const storage = getCookie("theme");
+
+        if (storage) {
+            setState(JSON.parse(storage as string));
+        } else {
+            setState(initialState);
+        }
+    }, [initialState]);
+
+    useEffect(() => {
+        setState((prev) => {
+            setCookie(key, JSON.stringify(prev));
+
+            return prev;
+        })
     }, [key, state])
 
     return [state, setState];

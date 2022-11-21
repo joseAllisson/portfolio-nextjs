@@ -1,10 +1,10 @@
 import { GetStaticProps } from "next";
 import { HiOutlineMail } from "react-icons/hi";
 import { BiPhoneCall } from "react-icons/bi";
-import { AiOutlineWhatsApp, AiOutlineMobile } from "react-icons/ai";
-
-import { ContactStyled } from "./style";
+import { AiOutlineWhatsApp } from "react-icons/ai";
 import { ButtonBase } from "@mui/material";
+
+import ContactStyled from "./style";
 
 export interface ContactProps {
   id: number;
