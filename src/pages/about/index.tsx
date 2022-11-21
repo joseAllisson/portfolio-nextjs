@@ -2,7 +2,6 @@ import { GetStaticProps } from "next";
 import Image from "next/image";
 import Typewriter from "typewriter-effect";
 
-import Profile from "../../assets/img/perfil.png";
 import { Text } from "../../components/Text";
 
 import AboutStyled from "./style";
@@ -36,7 +35,7 @@ const AboutPage = ({ formation, courses }: AboutProps) => {
         />
       </h3>
       <section className="profile-container">
-        <Image src={Profile} width={280} height={280} alt="José Alisson" />
+        <Image src="/img/perfil.png" width={280} height={280} alt="José Alisson" />
         <Text textAlign="justify">
           Bem vindo! eu sou programador! Desde criança sempre gostei de tecnologia, mas quando conheci
           o mundo da programação, me apaixonei, e desde então venho estudando e me aperfeiçoando
