@@ -36,7 +36,6 @@ export const Header = () => {
     },
   ];
 
-  // [ ] - subir um pouco o menu floating
   return (
     <HeaderStyled>
       <section className="background-image">

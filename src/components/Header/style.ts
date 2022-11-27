@@ -16,7 +16,7 @@ export const HeaderStyled = styled.header`
         justify-content: center;
         align-items: center;
 
-        @media ${mediaDevice.mobile} {
+        @media ${mediaDevice.tablet} {
             height: 40vh;
         }
 
@@ -27,6 +27,11 @@ export const HeaderStyled = styled.header`
             display: flex;
             flex-direction: column;
             gap: 40px;
+
+            @media ${mediaDevice.tablet} {
+                right: 32px;
+                top: 28px;
+            }
         }
     
         h1 {
