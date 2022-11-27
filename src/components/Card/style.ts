@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { mediaDevice } from "../../styles/responsive/mediaDevice";
 
 interface CardStyledProps {
     background: string;
@@ -10,6 +11,7 @@ export const CardStyled = styled.article<CardStyledProps>`
     background-position: center;
     background-repeat: no-repeat;
     height: 300px;
+    max-height: 300px;
 
     .overlay {
         background-color: rgba(0, 0, 0, 0.5);

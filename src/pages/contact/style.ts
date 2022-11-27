@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { mediaDevice } from "../../styles/responsive/mediaDevice";
 
 const ContactStyled = styled.section`
     h2, h3 {
@@ -16,8 +17,13 @@ const ContactStyled = styled.section`
     }
 
     .contact-container {
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
+        display: flex;
+        justify-content: space-around;
+        flex-wrap: wrap;
+
+        @media ${mediaDevice.tablet} {
+            text-align: center;
+        }
     
         article {
             padding: 24px;

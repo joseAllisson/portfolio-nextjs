@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { mediaDevice } from "../../styles/responsive/mediaDevice";
 
 export const HeaderStyled = styled.header`
     
@@ -14,6 +15,10 @@ export const HeaderStyled = styled.header`
         flex-direction: column;
         justify-content: center;
         align-items: center;
+
+        @media ${mediaDevice.mobile} {
+            height: 40vh;
+        }
 
         .animated-button-container {
             position: absolute;

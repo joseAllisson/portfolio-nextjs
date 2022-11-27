@@ -23,24 +23,26 @@ const AboutPage = ({ formation, courses }: AboutProps) => {
     <AboutStyled>
       <h2>Sobre</h2>
       <hr />
-      <h3 className="animated-text">
-        Desenvolvedor
-        <Typewriter
-          options={{
-            strings: ["Frontend", "Backend", "Fullstack"],
-            autoStart: true,
-            loop: true,
-            deleteSpeed: 20,
-          }}
-        />
-      </h3>
+      <div className="animated-text">
+        <h3 className="locked">Desenvolvedor</h3>
+        <h3>
+          <Typewriter
+            options={{
+              strings: ["Frontend", "Backend", "Fullstack"],
+              autoStart: true,
+              loop: true,
+              deleteSpeed: 20,
+            }}
+          />
+        </h3>
+      </div>
       <section className="profile-container">
         <Image src="/img/perfil.png" width={280} height={280} alt="José Alisson" />
         <Text textAlign="justify">
-          Bem vindo! eu sou programador! Desde criança sempre gostei de tecnologia, mas quando conheci
-          o mundo da programação, me apaixonei, e desde então venho estudando e me aperfeiçoando
-          para me tornar um profissional cada vez melhor. Nada melhor que trabalhar com o que se
-          gosta!
+          Bem vindo! eu sou programador! Desde criança sempre gostei de tecnologia, mas quando
+          conheci o mundo da programação, me apaixonei, e desde então venho estudando e me
+          aperfeiçoando para me tornar um profissional cada vez melhor. Nada melhor que trabalhar
+          com o que se gosta!
         </Text>
       </section>
       <hr />
@@ -57,11 +59,13 @@ const AboutPage = ({ formation, courses }: AboutProps) => {
       <h2>Cursos</h2>
       <section className="course-container">
         {courses.map((course) => (
-          <article key={course.id}>
-            <h3>{course.title}</h3>
-            <Text>Carga Horária: {course.time} horas</Text>
-            <Text fontWeight="600">{course.institution}</Text>
-          </article>
+          <a key={course.id} target="_blank" href={course.link} rel="noreferrer">
+            <article>
+              <h3>{course.title}</h3>
+              <Text>Carga Horária: {course.time} horas</Text>
+              <Text fontWeight="600">{course.institution}</Text>
+            </article>
+          </a>
         ))}
       </section>
     </AboutStyled>
@@ -111,7 +115,7 @@ export const getStaticProps: GetStaticProps = async () => {
       title: "Operador de microcomputador",
       time: "160",
       institution: "SENAI Theobaldo De Nigris – SP",
-      link: "",
+      link: "#",
     },
   ];
 

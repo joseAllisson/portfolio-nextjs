@@ -25,7 +25,7 @@ export const getStaticProps: GetStaticProps = async () => {
       id: 1,
       title: "Sua Música",
       description:
-        "Projeto desenvolvido em time, reconstruído utilizando Nextjs, serviço prestado para Sua Música, uma plataforma de lançamento de Artistas independentes do Brasil. Shows, CDs Promocionais, músicas, vídeo Clipes, entre outros.",
+        "Projeto desenvolvido em time, reconstruído utilizando Nextjs, serviço prestado para Sua Música, uma plataforma de lançamento de Artistas independentes do Brasil.",
       img: "/img/portfolio/suamusica.jpg",
       link: "https://suamusica.com.br",
     },

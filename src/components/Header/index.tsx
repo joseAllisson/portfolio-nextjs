@@ -14,7 +14,6 @@ import { HeaderStyled } from "./style";
 
 export const Header = () => {
   const { toggleTheme } = useContext(GlobalContext);
-  const { push } = useRouter();
   const [open, setOpen] = useState(false);
   const menu: FloatingMenuItemProps[] = [
     {
@@ -37,6 +36,7 @@ export const Header = () => {
     },
   ];
 
+  // [ ] - subir um pouco o menu floating
   return (
     <HeaderStyled>
       <section className="background-image">
