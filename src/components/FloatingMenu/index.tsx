@@ -10,6 +10,7 @@ export interface FloatingMenuItemProps {
   tooltip: string;
   children: React.ReactNode;
   link?: string;
+  className?: string;
   onClick?: () => void;
 }
 
@@ -39,10 +40,11 @@ export const FloatingMenuItem = ({
   children,
   index,
   link,
+  className,
   onClick,
 }: FloatingMenuItemProps) => {
   return (
-    <Tooltip title={tooltip}>
+    <Tooltip title={tooltip} className={className}>
       <FloatingMenuItemStyled index={index}>
         {link ? (
           <a href={link}>
@@ -59,4 +61,5 @@ export const FloatingMenuItem = ({
 FloatingMenuItem.defaultProps = {
   onClick: () => {},
   link: "",
+  className: "",
 };

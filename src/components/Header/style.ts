@@ -5,7 +5,7 @@ export const HeaderStyled = styled.header`
     
     .background-image {
         width: 100%;
-        height: 80vh;
+        height: 60vh;
         max-height: 1170px;
         background-image: url("../img/header.jpg");
         background-position: center;
@@ -22,15 +22,21 @@ export const HeaderStyled = styled.header`
 
         .animated-button-container {
             position: absolute;
-            right: 10%;
             top: 10%;
+            right: 10%;
             display: flex;
             flex-direction: column;
             gap: 40px;
+            z-index: 10;
 
             @media ${mediaDevice.tablet} {
-                right: 32px;
                 top: 28px;
+                right: 28px;
+            }
+
+            @media ${mediaDevice.mobile} {
+                top: 16px;
+                right: 28px;
             }
         }
     
@@ -58,6 +64,13 @@ export const HeaderStyled = styled.header`
 
         button {
             color: ${({ theme }) => theme.colors.text};
+        }
+    }
+
+    .desktop {
+        
+        @media ${mediaDevice.tablet} {
+            display: none;
         }
     }
 `;

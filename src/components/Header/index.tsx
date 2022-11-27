@@ -1,5 +1,4 @@
 import { useContext, useState } from "react";
-import { useRouter } from "next/router";
 import { VscFilePdf } from "react-icons/vsc";
 import { AiOutlineArrowDown } from "react-icons/ai";
 import { MdDarkMode } from "react-icons/md";
@@ -33,6 +32,7 @@ export const Header = () => {
       link: "#content",
       children: <AiOutlineArrowDown size={28} />,
       tooltip: "Rolar para baixo",
+      className: "desktop",
     },
   ];
 

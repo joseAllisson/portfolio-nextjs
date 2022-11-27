@@ -5,6 +5,10 @@ const AboutStyled = styled.section`
     section {
         padding: 24px;
         color: ${({ theme }) => theme.colors.text};
+
+        @media ${mediaDevice.mobile} {
+            padding: 16px 0;
+        }
     }
     
     h2 {

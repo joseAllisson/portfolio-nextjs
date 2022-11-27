@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { mediaDevice } from "../../../styles/responsive/mediaDevice";
 
 export const LayoutStyled = styled.main`
     background-image: url("../img/fundo.jfif");
@@ -16,10 +17,18 @@ export const ContentStyled = styled.section`
     position: relative;
     width: 1200px;
     padding: 20px;
+
+    @media ${mediaDevice.mobile} {
+        padding: 0;
+    }
 `;
 
 export const LeafStyled = styled.section`
     height: 100%;
     border: 1px solid ${({ theme }) => theme.colors.border};
     padding: 20px;
+
+        @media ${mediaDevice.mobile} {
+            padding: 16px;
+        }
 `;

@@ -31,6 +31,10 @@ const ContactStyled = styled.section`
             flex-direction: column;
             gap: 8px;
 
+            @media ${mediaDevice.mobile} {
+                padding: 16px 0;
+            }
+
             button {
                 font-size: 2rem;
                 margin-left: 8px;
