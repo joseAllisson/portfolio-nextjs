@@ -3,7 +3,7 @@ import styled from "styled-components";
 export const FooterStyled = styled.footer`
     border-top: 1px solid ${({ theme }) => theme.colors.text};
     background-color: #212529;
-    color: #fff;
+    color: #ffffff;
     text-align: center;
 
     .buttons-container {
