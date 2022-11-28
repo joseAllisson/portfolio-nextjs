@@ -1,12 +1,12 @@
 import { Header } from "../../Header";
 import { Footer } from "../../Footer";
 import { ContentStyled, LayoutStyled, LeafStyled } from "./style";
-import { useEffect, useState } from "react";
+import { ReactNode, useEffect, useState } from "react";
 import { useRouter } from "next/router";
 import { LoadingLinearProgress } from "../../LoadingLinearProgress";
 
 interface DefaultLayoutProps {
-  children: React.ReactNode;
+  children: ReactNode;
 }
 
 export const DefaultLayout = ({ children }: DefaultLayoutProps) => {

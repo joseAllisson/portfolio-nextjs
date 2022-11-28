@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { SyntheticEvent, useEffect, useState } from "react";
 import { useRouter } from "next/router";
 import Tabs from "@mui/material/Tabs";
 import Tab from "@mui/material/Tab";
@@ -18,7 +18,7 @@ export const NavTabs = ({ tabs }: NavTabsProps) => {
   const { push, pathname } = useRouter();
   const [value, setValue] = useState(0);
 
-  const handleChange = (_event: React.SyntheticEvent, newValue: number) => {
+  const handleChange = (_event: SyntheticEvent, newValue: number) => {
     setValue((prev) => {
       if (newValue !== value) {
         push(tabs[newValue].link);

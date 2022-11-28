@@ -1,7 +1,9 @@
+import { ReactNode } from "react";
+
 import { DefaultLayout } from "./Default";
 
 interface LayoutProps {
-  children: React.ReactNode;
+  children: ReactNode;
   layout?: "default" | "none";
 }
 

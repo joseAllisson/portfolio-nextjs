@@ -1,3 +1,4 @@
+import { ReactNode } from "react";
 import { BsFillGearFill } from "react-icons/bs";
 import Tooltip from "@mui/material/Tooltip";
 
@@ -8,7 +9,7 @@ import { FloatingMenuContentStyled, FloatingMenuItemStyled, FloatingMenuStyled }
 export interface FloatingMenuItemProps {
   index: number;
   tooltip: string;
-  children: React.ReactNode;
+  children: ReactNode;
   link?: string;
   className?: string;
   onClick?: () => void;
@@ -17,7 +18,7 @@ export interface FloatingMenuItemProps {
 interface FloatingMenuProps {
   open: boolean;
   onChange: (newValue: boolean) => void;
-  children: React.ReactNode;
+  children: ReactNode;
 }
 
 // Funcional apenas se usado com o FloatingMenuItem
@@ -59,7 +60,7 @@ export const FloatingMenuItem = ({
 };
 
 FloatingMenuItem.defaultProps = {
-  onClick: () => {},
+  onClick: null,
   link: "",
   className: "",
 };

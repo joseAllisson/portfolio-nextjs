@@ -1,4 +1,4 @@
-import { createContext } from "react";
+import { createContext, ReactNode } from "react";
 import { DefaultTheme, ThemeProvider } from "styled-components";
 
 import { darkTheme } from "../styles/themes/dark";
@@ -12,7 +12,7 @@ export interface GlobalContextProps {
 }
 
 export interface GlobalProviderProps {
-  children: React.ReactNode;
+  children: ReactNode;
 }
 
 export const GlobalContext = createContext({} as GlobalContextProps);
