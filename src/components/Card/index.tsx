@@ -11,9 +11,9 @@ export interface CardProps {
   link?: string;
 }
 
-export const Card = ({ title, description, img, link }: CardProps) => {
+export const Card = ({ id, title, description, img, link }: CardProps) => {
   return (
-    <CardStyled background={img}>
+    <CardStyled background={img} data-testid={id}>
       <section className="overlay">
         <div className="card-content">
           <h3>{title}</h3>
@@ -26,7 +26,11 @@ export const Card = ({ title, description, img, link }: CardProps) => {
               </ButtonBase>
             </Tooltip>
             <Tooltip title={link}>
-              <ButtonBase disabled={!link} onClick={() => window.open(link, "_blank")}>
+              <ButtonBase
+                disabled={!link}
+                onClick={() => window.open(link, "_blank")}
+                data-testid="linkButton"
+              >
                 <FaLink />
               </ButtonBase>
             </Tooltip>
