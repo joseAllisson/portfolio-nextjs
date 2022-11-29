@@ -1,4 +1,4 @@
-import { fireEvent, render, screen } from "@testing-library/react";
+import { fireEvent, screen } from "@testing-library/react";
 import { Card, CardProps } from ".";
 import { renderTheme } from "../../test/renderTheme";
 
@@ -21,11 +21,7 @@ describe("<Text />", () => {
     expect(description).toBeInTheDocument();
 
     const linkButtonActivated = screen.getByTestId("linkButton");
-    expect(linkButtonActivated).not.toBeDisabled();
-
-    // *verificação os botões estão funcionando
-    const buttons = screen.getAllByRole("button");
-    buttons.map((button) => fireEvent.click(button));
+    expect(linkButtonActivated).toBeEnabled();
 
     const card = screen.getByTestId(mock.id);
     expect(card).toHaveStyle({

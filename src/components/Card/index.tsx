@@ -21,17 +21,17 @@ export const Card = ({ id, title, description, img, link }: CardProps) => {
 
           <div className="button-container">
             <Tooltip title="Imagem">
-              <ButtonBase onClick={() => window.open(img, "_blank")}>
-                <FaEye />
+              <ButtonBase>
+                <a href={img} target="_blank" rel="noreferrer">
+                  <FaEye />
+                </a>
               </ButtonBase>
             </Tooltip>
             <Tooltip title={link}>
-              <ButtonBase
-                disabled={!link}
-                onClick={() => window.open(link, "_blank")}
-                data-testid="linkButton"
-              >
-                <FaLink />
+              <ButtonBase disabled={!link} data-testid="linkButton">
+                <a href={link} target="_blank" rel="noreferrer">
+                  <FaLink />
+                </a>
               </ButtonBase>
             </Tooltip>
           </div>

@@ -59,7 +59,6 @@ export const CardStyled = styled.article<CardStyledProps>`
                 button {
                     height: 50px;
                     width: 50px;
-                    padding: 12px;
                     background-color: ${({ theme }) => theme.colors.primary};
                     color: ${({ theme }) => theme.colors.secondary};
                     border-radius: 50%;
@@ -73,6 +72,14 @@ export const CardStyled = styled.article<CardStyledProps>`
                     &:disabled {
                         cursor: not-allowed;
                         filter: grayscale(60%);
+                    }
+
+                    a {
+                        width: 100%;
+                        height: 100%;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
                     }
                 }
             }
