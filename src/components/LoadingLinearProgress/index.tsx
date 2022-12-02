@@ -3,7 +3,7 @@ import Box from "@mui/material/Box";
 
 export const LoadingLinearProgress = () => {
   return (
-    <Box sx={{ width: "100%" }}>
+    <Box sx={{ width: "100%" }} id="linear-progress">
       <LinearProgress />
     </Box>
   );

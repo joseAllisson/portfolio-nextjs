@@ -80,4 +80,20 @@ describe("<FloatingMenu />", () => {
     fireEvent.click(screen.getByRole("button"));
     expect(fn).toHaveBeenCalledTimes(1);
   });
+
+  it("there must be the number of buttons plus the open button in the menu", () => {
+    const fn = jest.fn();
+
+    renderTheme(
+      <FloatingMenu open={true} onChange={(newValue) => fn(newValue)}>
+        {menu.map(({ index, children, ...item }) => (
+          <FloatingMenuItem {...item} index={index} key={index}>
+            {children}
+          </FloatingMenuItem>
+        ))}
+      </FloatingMenu>
+    );
+
+    expect(screen.getAllByRole("button")).toHaveLength(menu.length + 1);
+  });
 });
