@@ -1,5 +1,6 @@
 import { ButtonBase, Tooltip } from "@mui/material";
 import { FaEye, FaLink } from "react-icons/fa";
+
 import { Text } from "../Text";
 import { CardStyled } from "./style";
 

@@ -1,5 +1,4 @@
 import styled from "styled-components";
-import { mediaDevice } from "../../styles/responsive/mediaDevice";
 
 interface CardStyledProps {
     background: string;

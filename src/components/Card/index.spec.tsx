@@ -1,4 +1,4 @@
-import { fireEvent, screen } from "@testing-library/react";
+import { screen } from "@testing-library/react";
 import { Card, CardProps } from ".";
 import { renderTheme } from "../../test/renderTheme";
 
@@ -10,7 +10,7 @@ const mock: CardProps = {
   link: "https://google.com",
 };
 
-describe("<Text />", () => {
+describe("<Card />", () => {
   it("should render component with link", () => {
     renderTheme(<Card {...mock} />);
 

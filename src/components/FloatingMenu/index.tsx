@@ -24,7 +24,7 @@ interface FloatingMenuProps {
 // Funcional apenas se usado com o FloatingMenuItem
 export const FloatingMenu = ({ open, onChange, children }: FloatingMenuProps) => {
   return (
-    <FloatingMenuStyled>
+    <FloatingMenuStyled id="floating-menu">
       <AnimatedButton onClick={() => onChange(!open)} animation="moveRight">
         <BsFillGearFill size={28} />
       </AnimatedButton>

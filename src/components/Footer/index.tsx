@@ -11,30 +11,21 @@ export const Footer = () => {
       <Text padding="8px 0">Redes Sociais</Text>
       <hr />
       <div className="buttons-container">
-        <ButtonBase
-          onClick={() => {
-            window.open("https://github.com/joseallisson", "_blank");
-          }}
-        >
-          <FaGithub />
-        </ButtonBase>
-        <ButtonBase
-          onClick={() => {
-            window.open(
-              "https://www.linkedin.com/in/jos%C3%A9-alisson-bezerra-de-souza/",
-              "_blank"
-            );
-          }}
-        >
-          <FaLinkedinIn />
-        </ButtonBase>
-        <ButtonBase
-          onClick={() => {
-            window.open("https://www.instagram.com/jose_alisson_bezerra/", "_blank");
-          }}
-        >
+        <a href="https://github.com/joseallisson" target="_blank" rel="noreferrer">
+          <ButtonBase>
+            <FaGithub />
+          </ButtonBase>
+        </a>
+        <a href="https://www.linkedin.com/in/jos%C3%A9-alisson-bezerra-de-souza" target="_blank" rel="noreferrer">
+          <ButtonBase>
+            <FaLinkedinIn />
+          </ButtonBase>
+        </a>
+        <a href="https://www.instagram.com/jose_alisson_bezerra" target="_blank" rel="noreferrer">
+          <ButtonBase>
           <FaInstagram />
         </ButtonBase>
+        </a>
       </div>
 
       <Text className="background-primary">
