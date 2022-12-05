@@ -2,9 +2,6 @@ import styled from "styled-components";
 import { mediaDevice } from "../../styles/responsive/mediaDevice";
 
 export const HeaderStyled = styled.header`
-    position: relative;
-    overflow-x: hidden;
-    
     .background-image {
         width: 100%;
         height: 60vh;
@@ -17,6 +14,8 @@ export const HeaderStyled = styled.header`
         flex-direction: column;
         justify-content: center;
         align-items: center;
+        position: relative;
+        overflow-x: hidden;
 
         @media ${mediaDevice.tablet} {
             height: 40vh;

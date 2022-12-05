@@ -18,15 +18,11 @@ export const NavTabs = ({ tabs }: NavTabsProps) => {
   const { push, pathname } = useRouter();
   const [value, setValue] = useState(0);
 
-  const handleChange = (_event: SyntheticEvent, newValue: number) => {
-    setValue((prev) => {
-      if (newValue !== value) {
-        push(tabs[newValue].link);
-        return newValue;
-      }
-
-      return prev;
-    });
+  const handleChange = (_: SyntheticEvent, newValue: number) => {
+    if (newValue !== value) {
+      push(tabs[newValue].link);
+      setValue(newValue);
+    }
   };
 
   useEffect(() => {
