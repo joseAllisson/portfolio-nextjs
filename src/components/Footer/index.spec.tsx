@@ -1,4 +1,5 @@
 import { screen } from "@testing-library/react";
+
 import { Footer } from ".";
 import { renderTheme } from "../../test/renderTheme";
 

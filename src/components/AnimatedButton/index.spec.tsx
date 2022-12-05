@@ -1,4 +1,5 @@
 import { fireEvent, screen } from "@testing-library/react";
+
 import { AnimatedButton } from ".";
 import { renderTheme } from "../../test/renderTheme";
 

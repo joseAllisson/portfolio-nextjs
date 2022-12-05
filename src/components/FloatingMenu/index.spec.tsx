@@ -1,10 +1,10 @@
 import { fireEvent, screen } from "@testing-library/react";
-import { useState } from "react";
 import { AiOutlineArrowDown } from "react-icons/ai";
 import { MdDarkMode } from "react-icons/md";
 import { VscFilePdf } from "react-icons/vsc";
 
 import { FloatingMenu, FloatingMenuItem, FloatingMenuItemProps } from ".";
+
 import { renderTheme } from "../../test/renderTheme";
 
 const menu: FloatingMenuItemProps[] = [

@@ -46,7 +46,7 @@ export const FloatingMenuItem = ({
 }: FloatingMenuItemProps) => {
   return (
     <Tooltip title={tooltip} className={className}>
-      <FloatingMenuItemStyled index={index}>
+      <FloatingMenuItemStyled index={index} id={`floating-item-${index}`}>
         {link ? (
           <a href={link}>
             <AnimatedButton onClick={onClick}>{children}</AnimatedButton>
