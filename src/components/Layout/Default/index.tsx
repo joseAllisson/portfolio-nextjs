@@ -14,9 +14,8 @@ export const DefaultLayout = ({ children }: DefaultLayoutProps) => {
   const [loading, setLoading] = useState(false);
 
   useEffect(() => {
-    try {
       const start = () => setLoading(true);
-      const end = async () => setLoading(false);
+      const end = () => setLoading(false);
 
       events.on("routeChangeStart", start);
       events.on("routeChangeComplete", end);
@@ -26,10 +25,6 @@ export const DefaultLayout = ({ children }: DefaultLayoutProps) => {
         events.off("routeChangeComplete", end);
         events.off("routeChangeError", end);
       };
-    } catch (e) {
-      // eslint-disable-next-line no-console
-      return console.error("Erro ao carregar loading: useEffect in layout", e);
-    }
   }, [asPath, events]);
 
   return (

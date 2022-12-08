@@ -1,9 +1,14 @@
 import { ReactNode } from "react";
 import { render } from "@testing-library/react";
-import { ThemeProvider } from "styled-components";
 
-import { darkTheme } from "../../styles/themes/dark";
+import { GlobalProvider } from "../../context/GlobalContext";
+import { GlobalStyle } from "../../styles/globalStyle";
 
 export const renderTheme = (component: ReactNode) => {
-  return render(<ThemeProvider theme={darkTheme}>{component}</ThemeProvider>);
+  return render(
+    <GlobalProvider>
+      <GlobalStyle />
+      {component}
+    </GlobalProvider>
+  );
 };
