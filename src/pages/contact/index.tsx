@@ -12,7 +12,7 @@ export interface ContactProps {
   title: string;
   description: string;
   contact: string;
-  link?: string;
+  link: string;
 }
 
 interface ContactPageProps {
@@ -22,8 +22,6 @@ interface ContactPageProps {
 const ContactPage = ({ contacts }: ContactPageProps) => {
   const getIcon = (type: ContactProps["type"]) => {
     switch (type) {
-      case "email":
-        return <HiOutlineMail />;
       case "phone":
         return <BiPhoneCall />;
       case "whatsapp":
@@ -42,11 +40,10 @@ const ContactPage = ({ contacts }: ContactPageProps) => {
           <article key={id}>
             <h3>
               {title}
-              <ButtonBase
-                onClick={() => (link ? window.open(link, "_blank") : null)}
-                disabled={!link}
-              >
-                {getIcon(type)}
+              <ButtonBase>
+                <a href={link} target="_blank" rel="noreferrer">
+                    {getIcon(type)}
+                </a>
               </ButtonBase>
             </h3>
             <p>{description}</p>

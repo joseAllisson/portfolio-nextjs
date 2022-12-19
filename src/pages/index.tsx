@@ -8,7 +8,7 @@ interface HomeProps {
   cards: CardProps[];
 }
 
-const Home = ({ cards }: HomeProps) => {
+const HomePage = ({ cards }: HomeProps) => {
   return (
     <HomeStyled>
       {cards.map((card) => (
@@ -81,4 +81,4 @@ export const getStaticProps: GetStaticProps = async () => {
   };
 };
 
-export default Home;
+export default HomePage;

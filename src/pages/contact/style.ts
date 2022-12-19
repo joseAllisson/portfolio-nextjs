@@ -40,6 +40,10 @@ const ContactStyled = styled.section`
                 margin-left: 8px;
                 color: #808080;
 
+                a {
+                    color: inherit
+                }
+
                 &:hover {
                     color: currentColor;
                 }

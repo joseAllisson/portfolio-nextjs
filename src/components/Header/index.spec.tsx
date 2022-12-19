@@ -6,20 +6,13 @@ import { renderTheme } from "../../test/renderTheme";
 jest.mock("next/router", () => ({
   useRouter() {
     return {
-      route: "/",
       pathname: "/",
-      query: "",
-      asPath: "",
       push: jest.fn(),
-      events: {
-        on: jest.fn(),
-        off: jest.fn(),
-      },
-      beforePopState: jest.fn(() => null),
-      prefetch: jest.fn(() => null),
     };
   },
 }));
+
+global.open = jest.fn();
 
 describe("<Header />", () => {
   it("should display component", () => {
@@ -51,5 +44,8 @@ describe("<Header />", () => {
 
     const animatedButton = screen.getByRole("button", { name: "" });
     fireEvent.click(animatedButton);
+
+    const floatingMenuButtons = screen.getAllByRole("button", { name: "" });
+    floatingMenuButtons.map((button) => fireEvent.click(button));
   });
 });

@@ -64,6 +64,10 @@ export const CardStyled = styled.article<CardStyledProps>`
                     font-size: 1.25rem;
                     transition: 0.3s;
 
+                    a {
+                        color: inherit;
+                    }
+
                     &:hover {
                         filter: brightness(0.85);
                     }

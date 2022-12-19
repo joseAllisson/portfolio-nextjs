@@ -3,21 +3,12 @@ import { fireEvent, screen } from "@testing-library/react";
 import { NavTabs } from ".";
 import { renderTheme } from "../../test/renderTheme";
 
-jest.mock('next/router', () => ({
+jest.mock("next/router", () => ({
   useRouter() {
-    return ({
-      route: '/',
-      pathname: '/',
-      query: '',
-      asPath: '',
+    return {
+      pathname: "/",
       push: jest.fn(),
-      events: {
-        on: jest.fn(),
-        off: jest.fn()
-      },
-      beforePopState: jest.fn(() => null),
-      prefetch: jest.fn(() => null)
-    });
+    };
   },
 }));
 

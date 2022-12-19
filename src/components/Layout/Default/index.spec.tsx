@@ -15,8 +15,6 @@ jest.mock("next/router", () => ({
         on: jest.fn(),
         off: jest.fn(),
       },
-      beforePopState: jest.fn(() => null),
-      prefetch: jest.fn(() => null),
     };
   },
 }));
