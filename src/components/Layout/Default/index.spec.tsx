@@ -12,7 +12,7 @@ jest.mock("next/router", () => ({
       asPath: "",
       push: jest.fn(),
       events: {
-        on: jest.fn(),
+        on: jest.fn((_, handle) => handle()),
         off: jest.fn(),
       },
     };
