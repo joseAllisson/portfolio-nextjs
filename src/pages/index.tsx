@@ -35,17 +35,17 @@ export const getStaticProps: GetStaticProps = async () => {
       description:
         "Web Dev Brasil, site criado em grupo para TCC, uma empresa, Startup, focada em criação de sites e aplicativos.",
       img: "/img/portfolio/wdb.png",
-      // link: "http://wdb-c.epizy.com",
-      link: "",
+      // link: "https://wdb-five.vercel.app/",
+      link: "https://wdb-five.vercel.app/",
     },
     {
       id: 3,
       title: "PetWash",
       description:
-        "Um Petshop, para vários tipos de Pets! Site responsivo e com estruturas otimizadas.",
+        "Um Petshop, para vários tipos de Pets! Site responsivo e com estruturas otimizadas. Segunda site desenvolvido em grupo para TCC, feito com HTML puro.",
       img: "/img/portfolio/pet.png",
       // link: "http://petwash.epizy.com",
-      link: "",
+      link: "https://petwash.vercel.app",
     },
     {
       id: 4,

@@ -16,7 +16,7 @@ export const Footer = () => {
             <FaGithub />
           </ButtonBase>
         </a>
-        <a href="https://www.linkedin.com/in/jos%C3%A9-alisson-bezerra-de-souza" target="_blank" rel="noreferrer">
+        <a href="https://www.linkedin.com/in/jose-alisson-bezerra-de-souza/" target="_blank" rel="noreferrer">
           <ButtonBase>
             <FaLinkedinIn />
           </ButtonBase>
