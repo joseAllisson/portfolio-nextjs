@@ -37,12 +37,9 @@ const AboutPage = ({ formation, courses }: AboutProps) => {
         </h3>
       </div>
       <section className="profile-container">
-        <Image src="/img/perfil.png" width={280} height={280} alt="José Alisson" />
+        <Image src="/img/perfil2.jpg" className="profile-img" width={280} height={280} alt="José Alisson" />
         <Text textAlign="justify">
-          Bem vindo! eu sou programador! Desde criança sempre gostei de tecnologia, mas quando
-          conheci o mundo da programação, me apaixonei, e desde então venho estudando e me
-          aperfeiçoando para me tornar um profissional cada vez melhor. Nada melhor que trabalhar
-          com o que se gosta!
+          Bem vindo! Eu sou Técnico e Tecnólogo em análise e desenvolvimento de sistemas, apaixonado por desenvolvimento web! Sou programador Fullstack focado no frontend, sempre procurando aprimorar meus conhecimentos e desenvolver novas habilidades. Tenho conhecimento sólido em Javascript / Typescript, React, Next, Nest e PHP. Experiência em projetos legados, novos, backoffice e integrações.
         </Text>
       </section>
       <hr />
@@ -84,7 +81,7 @@ export const getStaticProps: GetStaticProps = async () => {
       id: 2,
       title: "Faculdade em analise e desenvolvimento de sistemas",
       time: "2022 - 2024",
-      institution: "Faculdade Impacta",
+      institution: "Faculdade Unicesumar",
     },
   ];
 

@@ -38,6 +38,11 @@ const AboutStyled = styled.section`
         }
     }
 
+    .profile-img {
+        border-radius: 50%;
+        border: 4px solid ${({ theme }) => theme.colors.background};
+    }
+
     hr {
         margin: 16px 0;
     }

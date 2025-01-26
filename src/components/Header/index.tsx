@@ -51,7 +51,7 @@ export const Header = () => {
 
         <div className="profile-container">
           <Image
-            src="/img/perfil.png"
+            src="/img/perfil2.jpg"
             alt="Jose Alisson"
             height={150}
             width={150}

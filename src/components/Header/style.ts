@@ -2,9 +2,12 @@ import styled from "styled-components";
 import { mediaDevice } from "../../styles/responsive/mediaDevice";
 
 export const HeaderStyled = styled.header`
+    position: relative;
+
     .background-image {
         width: 100%;
-        height: 60vh;
+        height: 30vh;
+        min-height: 280px;
         max-height: 1170px;
         background-image: url("../img/header.jpg");
         background-position: center;
@@ -14,8 +17,12 @@ export const HeaderStyled = styled.header`
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        position: relative;
-        overflow-x: hidden;
+        overflow: hidden;
+
+        .profile-img {
+            border-radius: 50%;
+            border: 4px solid ${({ theme }) => theme.colors.background};
+        }
 
         @media ${mediaDevice.tablet} {
             height: 40vh;

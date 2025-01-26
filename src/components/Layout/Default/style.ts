@@ -10,6 +10,7 @@ export const LayoutStyled = styled.main`
     min-height: 360px;
     display: flex;
     justify-content: center;
+    min-height: 51vh;
 `;
 
 export const ContentStyled = styled.section`
