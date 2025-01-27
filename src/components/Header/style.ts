@@ -17,7 +17,8 @@ export const HeaderStyled = styled.header`
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        overflow: hidden;
+        // overflow-y: hidden;
+        overflow-x: hidden;
 
         .profile-img {
             border-radius: 50%;
