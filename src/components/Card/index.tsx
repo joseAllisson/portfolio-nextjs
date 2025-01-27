@@ -22,19 +22,23 @@ export const Card = ({ id, title, description, img, link, github }: CardProps) =
           <Text fontSize="1rem">{description}</Text>
 
           <div className="button-container">
-            <Tooltip title={link}>
-              <ButtonBase disabled={!link} data-testid="linkButton">
-                <a href={link} target="_blank" rel="noreferrer">
-                  <FaLink />
-                </a>
-              </ButtonBase>
+            <Tooltip title={link || "Link indisponível"}>
+              <span>
+                <ButtonBase disabled={!link} data-testid="linkButton">
+                  <a href={link} target="_blank" rel="noreferrer">
+                    <FaLink />
+                  </a>
+                </ButtonBase>
+              </span>
             </Tooltip>
             <Tooltip title={github || "Link privado(empresas) ou inacessível"}>
-              <ButtonBase disabled={!github} data-testid="linkButton">
-                <a href={github} target="_blank" rel="noreferrer">
-                  <FaGit />
-                </a>
-              </ButtonBase>
+              <span>
+                <ButtonBase disabled={!github} data-testid="githubButton">
+                  <a href={github} target="_blank" rel="noreferrer">
+                    <FaGit />
+                  </a>
+                </ButtonBase>
+              </span>
             </Tooltip>
             <Tooltip title="Imagem">
               <ButtonBase>
