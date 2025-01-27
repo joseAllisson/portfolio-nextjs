@@ -6,6 +6,7 @@ export const HeaderStyled = styled.header`
 
     .background-image {
         width: 100%;
+        max-width: 100vw;
         height: 30vh;
         min-height: 280px;
         max-height: 1170px;
@@ -18,7 +19,7 @@ export const HeaderStyled = styled.header`
         justify-content: center;
         align-items: center;
         // overflow-y: hidden;
-        overflow-x: hidden;
+        overflow: hidden;
 
         .profile-img {
             border-radius: 50%;
