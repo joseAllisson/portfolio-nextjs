@@ -56,15 +56,24 @@ export const getStaticProps: GetStaticProps = async () => {
     },
     {
       id: 5,
+      title: "Ranek",
+      description:
+        "Projeto Vue.js para criar uma loja virtual, compras, vendas, cadastro de produtos, a api reseta os dados a cada 10 minutos, feito com Vue e Pinia.",
+      img: "/img/portfolio/ranek.png",
+      link: "https://js-ranek.vercel.app",
+      github: "https://github.com/joseAllisson/vue-ranek",
+    },
+    {
+      id: 6,
       title: "PetWash",
       description:
-        "Um Petshop, para vários tipos de Pets! Site responsivo e com estruturas otimizadas. Segunda site desenvolvido em grupo para TCC, feito com HTML puro.",
+        "Um Petshop, para vários tipos de Pets! Site responsivo e com estruturas otimizadas. Segundo site desenvolvido em grupo para TCC, feito com HTML puro.",
       img: "/img/portfolio/pet.png",
       link: "https://petwash.vercel.app",
       github: "https://github.com/joseAllisson/petwash",
     },
     {
-      id: 6,
+      id: 7,
       title: "Dogs",
       description:
         "Uma rede social para Postar fotos de seus Pets. Criado com React.js utilizando uma API WordPress para cadastrar usuários e posts.",
@@ -73,7 +82,7 @@ export const getStaticProps: GetStaticProps = async () => {
       github: "https://github.com/joseAllisson/Dogs",
     },
     {
-      id: 7,
+      id: 8,
       title: "Sistema controle de acesso",
       description:
         "A aplicação Access foi desenvolvida para solucionar problemas de gestão de um condomínio, sendo uma iniciativa totalmente original e gratuita. A aplicação foi desenvolvida em PHP MVC puro em português como desafio.",
@@ -82,7 +91,7 @@ export const getStaticProps: GetStaticProps = async () => {
       github: "https://github.com/joseAllisson/sistema-controle-acesso",
     },
     {
-      id: 8,
+      id: 9,
       title: "Notícias cidade",
       description:
         "Seu portal de notícias diário! um blog otimizado e simplificado com WordPress.",
@@ -90,7 +99,7 @@ export const getStaticProps: GetStaticProps = async () => {
       link: "",
     },
     {
-      id: 9,
+      id: 10,
       title: "WDB blog",
       description:
         "Web Dev Brasil transformado em um blog utilizando WordPress.",
