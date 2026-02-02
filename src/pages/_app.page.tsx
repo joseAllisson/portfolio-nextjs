@@ -4,7 +4,6 @@ import { Analytics } from "@vercel/analytics/next";
 
 import { GlobalStyle } from "../styles/globalStyle";
 import { LayoutComponent } from "../components/Layout";
-
 import { GlobalProvider } from "../context/GlobalContext";
 
 export default function App({ Component, pageProps }: AppProps) {
