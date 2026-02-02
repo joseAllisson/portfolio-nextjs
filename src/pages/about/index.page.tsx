@@ -4,7 +4,7 @@ import Typewriter from "typewriter-effect";
 
 import { Text } from "../../components/Text";
 
-import AboutStyled from "./style";
+import AboutStyled from "./_style";
 
 interface coursesProps {
   id: number;
@@ -39,7 +39,8 @@ const AboutPage = ({ formation, courses }: AboutProps) => {
       <section className="profile-container">
         <Image src="/img/perfil2.jpg" className="profile-img" width={280} height={280} alt="José Alisson" />
         <Text textAlign="justify">
-          Bem vindo! Eu sou Técnico e Tecnólogo em análise e desenvolvimento de sistemas, apaixonado por desenvolvimento web! Sou programador Fullstack focado no frontend, sempre procurando aprimorar meus conhecimentos e desenvolver novas habilidades. Tenho conhecimento sólido em Javascript / Typescript, React, Next, Nest e PHP. Experiência em projetos legados, novos, backoffice e integrações.
+          Bem vindo! Graduado em Análise e Desenvolvimento de Sistemas, apaixonado por tecnologia, IA e inovação em desenvolvimento de software. Com mais de 4 anos de experiência, atuo como desenvolvedor Fullstack.
+          Possuo conhecimento sólido em JavaScript, TypeScript, React, Next.js, Nest.js e PHP, além de experiência em projetos legados, novos produtos, backoffice e integrações. Utilizando IA para melhorar o código e a velocidade de entrega. Sou adepto de boas práticas de código, design patterns como Atomic Design em React e estou sempre buscando aprimorar minhas habilidades e explorar novas tecnologias.
         </Text>
       </section>
       <hr />

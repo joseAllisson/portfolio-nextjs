@@ -4,7 +4,7 @@ import { BiPhoneCall } from "react-icons/bi";
 import { AiOutlineWhatsApp } from "react-icons/ai";
 import { ButtonBase } from "@mui/material";
 
-import ContactStyled from "./style";
+import ContactStyled from "./_style";
 
 export interface ContactProps {
   id: number;

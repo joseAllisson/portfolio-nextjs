@@ -1,25 +1,51 @@
 import { GetStaticProps } from "next";
+import { useState } from "react";
 
-import { Card, CardProps } from "../components/Card";
+import { Card, CardProps } from "../../components/Card";
+import { ProjectModal } from "../../components/ProjectModal";
+import { ProjectsPageStyled } from "./_style";
 
-import HomeStyled from "./style";
-
-interface HomeProps {
+interface ProjectsProps {
   cards: CardProps[];
 }
 
-const HomePage = ({ cards }: HomeProps) => {
+const ProjectsPage = ({ cards }: ProjectsProps) => {
+  const [modalOpen, setModalOpen] = useState(false);
+  const [currentProjectIndex, setCurrentProjectIndex] = useState(0);
+
+  const openModal = (index: number) => {
+    setCurrentProjectIndex(index);
+    setModalOpen(true);
+  };
+
   return (
-    <HomeStyled>
-      {cards.map((card) => (
-        <Card key={card.id} {...card} />
-      ))}
-    </HomeStyled>
+    <ProjectsPageStyled>
+      <div className="page-header">
+        <h1>Meus Projetos</h1>
+        <p>Uma coleção completa dos projetos que desenvolvi ao longo da minha jornada como desenvolvedor</p>
+      </div>
+      <div className="projects-grid">
+        {cards.map((card, index) => (
+          <Card 
+            key={card.id} 
+            {...card} 
+            onPreview={() => openModal(index)}
+          />
+        ))}
+      </div>
+
+      <ProjectModal
+        isOpen={modalOpen}
+        onClose={() => setModalOpen(false)}
+        projects={cards}
+        currentIndex={currentProjectIndex}
+        onNavigate={setCurrentProjectIndex}
+      />
+    </ProjectsPageStyled>
   );
 };
 
 export const getStaticProps: GetStaticProps = async () => {
-  // adicionar projetos
   const cards = [
     {
       id: 1,
@@ -115,4 +141,4 @@ export const getStaticProps: GetStaticProps = async () => {
   };
 };
 
-export default HomePage;
+export default ProjectsPage;

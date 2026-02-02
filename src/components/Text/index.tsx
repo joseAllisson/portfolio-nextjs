@@ -15,24 +15,21 @@ export interface TextStyledProps {
   textAlign?: "left" | "right" | "center" | "justify" | "initial" | "inherit";
 }
 
-// v1
-// export const TextStyled = styled.p<TextStyledProps>`
-//     font-size: ${({ fontSize }) => fontSize};
-//     font-weight: ${({ fontWeight }) => fontWeight};
-//     color: ${({ color }) => color};
-//     display: ${({ display }) => display};
-//     text-overflow: ${({ textOverflow }) => textOverflow};
-//     -webkit-line-clamp: ${({ lineClamp }) => lineClamp};
-//     overflow: ${({ overflow }) => overflow};
-//     max-width: ${({ maxWidth }) => maxWidth};
-//     max-height: ${({ maxHeight }) => maxHeight};
-// `;
-
-// v2
-export const Text = styled.p<TextStyledProps>(({ lineClamp, ...props }: TextStyledProps) => ({
-  ...props,
-  webkitLineClamp: lineClamp,
-}));
+export const Text = styled.p<TextStyledProps>`
+  font-size: ${({ fontSize }) => fontSize || "1rem"};
+  font-weight: ${({ fontWeight }) => fontWeight || "400"};
+  color: ${({ color }) => color || "inherit"};
+  display: ${({ display }) => display || "block"};
+  text-overflow: ${({ textOverflow }) => textOverflow || "ellipsis"};
+  -webkit-line-clamp: ${({ lineClamp }) => lineClamp || "none"};
+  overflow: ${({ overflow }) => overflow || "visible"};
+  max-width: ${({ maxWidth }) => maxWidth || "none"};
+  max-height: ${({ maxHeight }) => maxHeight || "none"};
+  padding: ${({ padding }) => padding || "0"};
+  white-space: ${({ whiteSpace }) => whiteSpace || "normal"};
+  text-align: ${({ textAlign }) => textAlign || "left"};
+  line-height: 1.6;
+`;
 
 Text.defaultProps = {
   color: "inherit",

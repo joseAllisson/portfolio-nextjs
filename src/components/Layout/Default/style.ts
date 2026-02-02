@@ -2,34 +2,36 @@ import styled from "styled-components";
 import { mediaDevice } from "../../../styles/responsive/mediaDevice";
 
 export const LayoutStyled = styled.main`
-    background-image: url("../img/fundo.jfif");
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-attachment: fixed;
-    min-height: 360px;
-    display: flex;
-    justify-content: center;
-    min-height: 51vh;
+  min-height: 65vh;
+  padding-top: 80px;
+  background: ${({ theme }) => theme.colors?.background || "#ffffff"};
+  position: relative;
+
+  &::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: 
+      radial-gradient(circle at 20% 30%, rgba(99, 102, 241, 0.08) 0%, transparent 50%),
+      radial-gradient(circle at 80% 70%, rgba(139, 92, 246, 0.08) 0%, transparent 50%);
+    pointer-events: none;
+    z-index: 0;
+  }
 `;
 
 export const ContentStyled = styled.section`
-    background-color: ${({ theme }) => theme.colors.background};
-    position: relative;
-    width: 1200px;
-    padding: 20px;
+  // position: relative;
+  z-index: 1;
+  width: 100%;
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0;
+  animation: fadeIn 0.6s ease-out;
 
-    @media ${mediaDevice.mobile} {
-        padding: 0;
-    }
-`;
-
-export const LeafStyled = styled.section`
-    height: 100%;
-    border: 1px solid ${({ theme }) => theme.colors.border};
-    padding: 20px;
-
-        @media ${mediaDevice.mobile} {
-            padding: 16px;
-        }
+  @media ${mediaDevice.mobile} {
+    padding: 0;
+  }
 `;

@@ -8,24 +8,25 @@ import { FooterStyled } from "./style";
 export const Footer = () => {
   return (
     <FooterStyled>
-      <Text padding="8px 0">Redes Sociais</Text>
-      <hr />
-      <div className="buttons-container">
-        <a href="https://github.com/joseallisson" target="_blank" rel="noreferrer">
-          <ButtonBase>
-            <FaGithub />
-          </ButtonBase>
-        </a>
-        <a href="https://www.linkedin.com/in/jose-alisson-bezerra-de-souza/" target="_blank" rel="noreferrer">
-          <ButtonBase>
-            <FaLinkedinIn />
-          </ButtonBase>
-        </a>
-        <a href="https://www.instagram.com/jose_alisson_bezerra" target="_blank" rel="noreferrer">
-          <ButtonBase>
-          <FaInstagram />
-        </ButtonBase>
-        </a>
+      <div className="social-section">
+        <Text className="social-title">Redes Sociais</Text>
+        <div className="buttons-container">
+          <a href="https://github.com/joseallisson" target="_blank" rel="noreferrer">
+            <ButtonBase>
+              <FaGithub />
+            </ButtonBase>
+          </a>
+          <a href="https://www.linkedin.com/in/jose-alisson-bezerra-de-souza/" target="_blank" rel="noreferrer">
+            <ButtonBase>
+              <FaLinkedinIn />
+            </ButtonBase>
+          </a>
+          <a href="https://www.instagram.com/jose_alisson_bezerra" target="_blank" rel="noreferrer">
+            <ButtonBase>
+              <FaInstagram />
+            </ButtonBase>
+          </a>
+        </div>
       </div>
 
       <Text className="background-primary">
